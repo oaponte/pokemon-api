@@ -1,4 +1,4 @@
-import { searchCharacterService } from "../../services/search-character.service";
+import { searchCharacterService } from "../services/search-character.service";
 
 export const getListCharacters = async (limit, next) => {
     const offSet = `?offset=${next}&limit=${limit}`;

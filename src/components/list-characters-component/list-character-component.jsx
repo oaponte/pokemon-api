@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getListCharacters } from '../actions/search-character.action';
+import { getListCharacters } from '../../actions/search-character.action';
 import { searchCharacterImg } from '../../utils/img';
 
 export const ListCharacterComponent = () => {
