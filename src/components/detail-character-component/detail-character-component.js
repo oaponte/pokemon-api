@@ -1,16 +1,11 @@
 import React from 'react'
 import { searchCharacterImg } from '../../utils/img'
 
-export const FoundSearchCharacterComponent = ({character}) => {
-
-  const handleOnClick = (character) => {
-    console.log("handleOnClick");
-
-  }
+export const DetailCharacterComponent = ({character}) => {
 
   return (
     <>
-      <div className='card FoundCards searchComponent' onClick={() => handleOnClick(character)}>
+      <div className='card FoundCards searchComponent'>
         <div>
           <img src={searchCharacterImg(character?.id)} alt={character?.name} className='FoundImg' />
         </div>
@@ -20,6 +15,9 @@ export const FoundSearchCharacterComponent = ({character}) => {
         <div>
           <h2>{ `${character?.name}` }</h2>
         </div>
+      </div>
+      <div>
+        <h2>Back</h2>
       </div>
     </>
   )

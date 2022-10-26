@@ -1,14 +1,20 @@
+import { BrowserRouter, Route } from 'react-router-dom'
+import { routes } from './utils/routes';
 import './App.css';
-import { SearchCharacterComponent } from './components/search-character-component/search-character-component';
-import { ListCharacterComponent } from './components/list-characters-component/list-character-component';
-import { HeaderComponent } from './components/header/header.component';
 
 function App() {
   return (
     <div className="App">
-      <HeaderComponent />
-      <SearchCharacterComponent />
-      <ListCharacterComponent />
+      <BrowserRouter>
+        <div>
+          {
+            Object.keys(routes()).map((element, index) => {
+              const RouterComponent = routes()[element].component;
+              return <Route exact key={index} path={element} component={() => <RouterComponent />} />
+            })
+          }
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
