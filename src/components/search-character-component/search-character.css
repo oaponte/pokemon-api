@@ -1,0 +1,19 @@
+.searchComponent {
+    padding-top: 30px;
+}
+
+.FoundCards {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(240, 233, 233);
+}
+
+.FoundCards:hover{
+    background-color: rgb(217, 236, 247);
+    cursor: pointer;
+    border-color: darkslategray;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}

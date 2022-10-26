@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { searchCharacterService } from '../../services/search-character.service';
-import { searchCharacterImg } from '../../utils/img';
+import { FoundSearchCharacterComponent } from './found-search-character-component';
+import { NotFoundSearchCharacterComponent } from './not-found-search-character-component';
+import './search-character.css';
 
 export const SearchCharacterComponent = () => {
-
   const [nameToSearch, setNameToSearch] = useState('');
   const [character, setCharacter] = useState('');
 
@@ -19,30 +20,15 @@ export const SearchCharacterComponent = () => {
   }
 
   return (
-    <div>
-      <h3>Pokemon search</h3>
+    <div className='searchComponent'>
       <input type='text' onChange={handleChange} />
       <button onClick={handleSearch}>
         find
       </button>
       {
-        character && (
-          <>
-          <hr />
-            <div>
-              <h2>{ `${character?.name} (${character?.id})` }</h2>
-            </div>
-            <div>
-              <img src={searchCharacterImg(character?.id)} alt={character?.name}/>
-            </div>
-            <div>
-              <h5>Weight: { character?.weight }</h5>
-            </div>
-            <div>
-            <h5>Height: { character?.height }</h5> 
-            </div>
-          </>
-        )
+        character ?
+          <FoundSearchCharacterComponent character={character}/> : 
+            character === null ? <NotFoundSearchCharacterComponent /> : '' 
       }
     </div>
   )

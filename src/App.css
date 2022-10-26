@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.Logo {
+  height: 40px;
+  width: 100px;
+}
+
+.FoundImg {
+  height: 180px;
+  width: 180px;
+}
+
+.notFoundImg {
+  height: 40px;
+  width: 40px;
+}
+
+.card {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: initial;
+  -webkit-animation-iteration-count: initial;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-4px);
+		-ms-transform:     translateY(-4px);
+		transform:         translateY(-4px)
+	}
+}

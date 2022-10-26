@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getListCharacters } from '../../actions/search-character.action';
 import { searchCharacterImg } from '../../utils/img';
+import './list-character.css';
 
 export const ListCharacterComponent = () => {
   const limit = 20;
@@ -29,9 +30,8 @@ export const ListCharacterComponent = () => {
   }, []);
 
   return (
-    <div>
-      <hr />
-      <h3>Pokemon list!</h3>
+    <div className='listComponent'>
+      <h3>Gotta catch ’em all!</h3>
       {
         characters && (
           <>
@@ -39,12 +39,22 @@ export const ListCharacterComponent = () => {
               { characters.map(((item, index) => {
                 const idx = index + 1;
                 return (
-                  <p key={idx}><img src={searchCharacterImg(idx)} alt={item?.name}/>{ `${item?.name} (${idx})` }</p>
+                  <div className='card ListCards'>
+                    <div>
+                      <img src={searchCharacterImg(idx)} alt={item?.name}/>
+                    </div>
+                    <div>
+                      # {idx}
+                    </div>
+                    <div>
+                      { item?.name }
+                    </div>
+                  </div>
                 )
                 })
               )}
             </div>
-            <div onClick={() => showMore()}>
+            <div className='listComponent' onClick={() => showMore()}>
               <h4>Show more...</h4>
             </div>
           </>

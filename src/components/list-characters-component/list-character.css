@@ -1,0 +1,19 @@
+.listComponent {
+    padding-top: 30px;
+}
+
+.ListCards {
+    background-color: rgb(240, 233, 233);
+    align-self: flex-end;
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+  
+.ListCards:hover{
+    background-color: rgb(217, 236, 247);
+    cursor: pointer;
+    border-color: darkslategray;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
