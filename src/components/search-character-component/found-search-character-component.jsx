@@ -1,5 +1,6 @@
 import React from 'react'
 import { searchCharacterImg } from '../../utils/img'
+import { TypesComponent } from '../types-component/types.component';
 
 export const FoundSearchCharacterComponent = ({character}) => {
 
@@ -19,6 +20,9 @@ export const FoundSearchCharacterComponent = ({character}) => {
         </div>
         <div>
           <h2>{ `${character?.name}` }</h2>
+        </div>
+        <div>
+          <TypesComponent characterTypes={character?.types}/>
         </div>
       </div>
     </>

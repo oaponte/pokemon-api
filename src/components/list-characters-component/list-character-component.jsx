@@ -44,10 +44,7 @@ export const ListCharacterComponent = () => {
                       <img src={searchCharacterImg(idx)} alt={item?.name}/>
                     </div>
                     <div>
-                      # {idx}
-                    </div>
-                    <div>
-                      { item?.name }
+                      {`# ${idx} ${item?.name}`}
                     </div>
                   </div>
                 )

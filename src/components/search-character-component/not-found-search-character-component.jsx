@@ -5,10 +5,10 @@ import { PIKACHU_ID, PIKACHU_NAME } from '../../utils/constants'
 export const NotFoundSearchCharacterComponent = () => {
   return (
     <>
-      <div className='searchComponent'>
-        <p>
+      <div className='card FoundCards searchComponent'>
+        <h2>
           Not found <img src={searchCharacterImg(PIKACHU_ID)} alt={PIKACHU_NAME} className={'notFoundImg'}/>
-        </p>
+        </h2>
       </div>
     </>
   )
